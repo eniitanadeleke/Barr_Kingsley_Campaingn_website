@@ -1,0 +1,19 @@
+/* Edge-to-edge run of photographs with hairline gaps, so the pictures
+   read as one continuous band rather than as separate cards. */
+
+.image-band { padding-block: 0; }
+.image-band--dark  { background: var(--abyss); }
+.image-band--sand  { background: var(--stone-0); }
+
+.image-band__track {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2px;
+}
+
+.image-band__item { aspect-ratio: 4 / 5; }
+
+@media (max-width: 640px) {
+  .image-band__track { grid-template-columns: 1fr 1fr; }
+}

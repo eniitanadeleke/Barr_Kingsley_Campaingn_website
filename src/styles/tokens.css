@@ -1,0 +1,78 @@
+/* ============================================================
+   Design tokens.
+
+   Palette is drawn from the candidate's own regalia in the
+   manifesto portrait — Ijaw chieftaincy dress — rather than from
+   party livery: the deep water-dark of the delta, the antique
+   brass of the ceremonial chain, and the oxblood of coral beads.
+   It reads as authority and place rather than as party colours,
+   and it belongs to him specifically.
+   ============================================================ */
+
+:root {
+  /* Dark surfaces — delta water, deepest to lightest */
+  --abyss:    #08151A;
+  --deep:     #0E2229;
+  --slate:    #17343D;
+  --slate-lt: #24505C;
+
+  /* Brass — the ceremonial chain */
+  --brass:    #C2A15C;
+  --brass-lt: #D4B87A;
+  --brass-hi: #E2C88F;
+  --brass-dk: #937339;
+
+  /* Oxblood — coral beads */
+  --coral:    #A2453B;
+  --coral-lt: #C25E4F;
+
+  /* Light surfaces — cool stone, never cream */
+  --stone-0:  #FFFFFF;
+  --stone-50: #F2F4F3;
+  --stone-100:#E4E8E7;
+  --stone-200:#CBD3D2;
+
+  /* Text */
+  --ink:      #0D1A1F;
+  --ink-soft: #48595F;
+  --ink-mute: #74868C;
+  --on-dark:  #DCE4E4;
+  --on-dark-mute: #93A5AA;
+
+  /* Lines */
+  --rule:       #D5DCDB;
+  --rule-dark:  rgba(194, 161, 92, 0.28);
+
+  /* Type */
+  --font-display: 'Bodoni Moda', 'Times New Roman', serif;
+  --font-body: 'Archivo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --step--2: clamp(0.72rem, 0.70rem + 0.10vw, 0.78rem);
+  --step--1: clamp(0.84rem, 0.81rem + 0.14vw, 0.92rem);
+  --step-0:  clamp(1.00rem, 0.96rem + 0.22vw, 1.12rem);
+  --step-1:  clamp(1.25rem, 1.16rem + 0.44vw, 1.55rem);
+  --step-2:  clamp(1.56rem, 1.40rem + 0.80vw, 2.15rem);
+  --step-3:  clamp(1.95rem, 1.68rem + 1.35vw, 2.99rem);
+  --step-4:  clamp(2.44rem, 2.00rem + 2.20vw, 4.14rem);
+  --step-5:  clamp(3.05rem, 2.35rem + 3.50vw, 5.75rem);
+  --step-6:  clamp(3.81rem, 2.70rem + 5.55vw, 7.99rem);
+
+  /* Space */
+  --s-1: 8px;   --s-2: 16px;  --s-3: 24px;
+  --s-4: 40px;  --s-5: 64px;  --s-6: 96px;  --s-7: 144px;
+
+  /* Layout */
+  --wrap: 1240px;
+  --wrap-text: 680px;
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

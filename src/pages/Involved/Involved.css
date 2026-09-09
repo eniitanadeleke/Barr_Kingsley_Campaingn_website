@@ -1,0 +1,13 @@
+.involved-aside { position: sticky; top: 150px; }
+.involved-aside__image { margin-bottom: var(--s-4); }
+
+.involved-status {
+  margin-top: var(--s-3);
+  padding: var(--s-2) 0 var(--s-2) var(--s-3);
+  border-left: 1px solid var(--brass);
+  font-size: var(--step--1);
+  color: var(--ink-soft);
+}
+.involved-status--error { border-left-color: var(--coral); color: var(--coral); }
+
+@media (max-width: 960px) { .involved-aside { position: static; } }

@@ -1,0 +1,56 @@
+.btn {
+  --btn-fg: var(--abyss);
+  --btn-bg: var(--brass);
+  --btn-line: var(--brass);
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  padding: 19px 34px;
+  border: 1px solid var(--btn-line);
+  border-radius: 0;
+  color: var(--btn-fg);
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  isolation: isolate;
+  transition: color 0.45s var(--ease), border-color 0.45s var(--ease);
+}
+
+/* The fill wipes in from the left rather than the whole button
+   changing colour at once. */
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--btn-bg);
+  transform: scaleX(1);
+  transform-origin: 0 50%;
+  transition: transform 0.5s var(--ease);
+}
+
+.btn:hover::before { transform: scaleX(0); transform-origin: 100% 50%; }
+
+.btn--primary { --btn-fg: var(--abyss); --btn-bg: var(--brass); --btn-line: var(--brass); }
+.btn--primary:hover { color: var(--brass); }
+
+.btn--secondary { --btn-bg: transparent; --btn-line: rgba(220,228,228,0.45); color: var(--stone-0); }
+.btn--secondary::before { background: var(--stone-0); transform: scaleX(0); }
+.btn--secondary:hover { color: var(--abyss); border-color: var(--stone-0); }
+.btn--secondary:hover::before { transform: scaleX(1); transform-origin: 0 50%; }
+
+.btn--dark { --btn-fg: var(--stone-0); --btn-bg: var(--deep); --btn-line: var(--deep); }
+.btn--dark:hover { color: var(--deep); }
+
+.btn--ghost { --btn-bg: transparent; --btn-line: var(--rule); color: var(--ink); }
+.btn--ghost::before { background: var(--ink); transform: scaleX(0); }
+.btn--ghost:hover { color: var(--stone-0); border-color: var(--ink); }
+.btn--ghost:hover::before { transform: scaleX(1); transform-origin: 0 50%; }

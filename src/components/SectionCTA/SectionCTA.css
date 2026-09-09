@@ -1,0 +1,4 @@
+.section-cta { text-align: center; }
+.section-cta .kicker { justify-content: center; }
+.section-cta h2 { margin-bottom: var(--s-3); max-width: 22ch; margin-inline: auto; }
+.section-cta__lead { margin: 0 auto var(--s-4); max-width: 52ch; }

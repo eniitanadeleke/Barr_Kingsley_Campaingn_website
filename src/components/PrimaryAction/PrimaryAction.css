@@ -1,0 +1,34 @@
+/* A quiet brass-ruled strip rather than a solid colour band. The old
+   full-width red bar shouted; this holds the same message without
+   competing with the photography below it. */
+
+.primary-action {
+  background: var(--deep);
+  border-bottom: 1px solid var(--rule-dark);
+  color: var(--on-dark);
+  text-align: center;
+  padding: 14px var(--s-3);
+  font-size: var(--step--1);
+  letter-spacing: 0.015em;
+}
+
+.primary-action a {
+  position: relative;
+  color: var(--brass-lt);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.primary-action a::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -3px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(1);
+  transform-origin: 0 50%;
+  transition: transform 0.4s var(--ease);
+}
+
+.primary-action a:hover { color: var(--stone-0); }
+.primary-action a:hover::after { transform: scaleX(0); transform-origin: 100% 50%; }

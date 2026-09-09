@@ -1,0 +1,26 @@
+/* No boxes. A brass hairline and generous space does the work that a
+   bordered card was doing, and reads considerably quieter. */
+
+.stat { padding-left: var(--s-3); border-left: 1px solid var(--brass); }
+.stat + .stat { margin-top: var(--s-4); }
+
+.stat__value {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.05;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.stat__body p {
+  margin: 0;
+  font-size: var(--step--1);
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+
+.section-dark .stat__value, .fullbleed .stat__value { color: var(--stone-0); }
+.section-dark .stat__body p, .fullbleed .stat__body p { color: var(--on-dark); }

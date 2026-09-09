@@ -1,0 +1,40 @@
+/* The six themes are not ranked, so they carry no numbered markers
+   beyond the "Theme one … six" labels in the supplied copy. The first
+   hundred days genuinely is a sequence, so that list is numbered. */
+
+.plan-days {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: var(--s-6);
+  align-items: start;
+}
+
+.plan-days__text h2 { margin-bottom: var(--s-3); }
+
+.steps { counter-reset: step; list-style: none; margin: var(--s-4) 0 0; padding: 0; }
+
+.steps li {
+  counter-increment: step;
+  position: relative;
+  padding: var(--s-3) 0 var(--s-3) 62px;
+  border-top: 1px solid var(--rule);
+  color: var(--ink-soft);
+  max-width: 56ch;
+}
+
+.steps li::before {
+  content: counter(step, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: calc(var(--s-3) + 2px);
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+  font-weight: 400;
+  color: var(--brass-dk);
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 900px) {
+  .plan-days { grid-template-columns: 1fr; gap: var(--s-4); }
+  .plan-days__media { max-width: 460px; }
+}

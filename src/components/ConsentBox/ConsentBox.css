@@ -1,0 +1,35 @@
+.consent {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: var(--s-3) 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: var(--s-4);
+  max-width: 40rem;
+}
+
+.consent input[type="checkbox"] {
+  width: 19px; height: 19px;
+  margin-top: 3px;
+  flex-shrink: 0;
+  accent-color: var(--brass-dk);
+  cursor: pointer;
+}
+
+.consent__label {
+  display: block;
+  font-size: var(--step--1);
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 8px;
+  cursor: pointer;
+  line-height: 1.55;
+}
+
+.consent-note {
+  margin: 0;
+  font-size: var(--step--1);
+  color: var(--ink-mute);
+  line-height: 1.6;
+}

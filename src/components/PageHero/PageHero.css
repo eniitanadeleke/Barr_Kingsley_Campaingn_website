@@ -1,0 +1,32 @@
+.phero--plain {
+  background: var(--abyss);
+  color: var(--on-dark);
+  padding-block: var(--s-6);
+  position: relative;
+  overflow: hidden;
+}
+
+/* A single hairline brass rule sweeping across the field — the only
+   ornament on the plain hero. */
+.phero--plain::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--brass) 0%, transparent 62%);
+}
+
+.phero__title {
+  color: var(--stone-0);
+  max-width: 17ch;
+  margin-bottom: var(--s-3);
+}
+
+.phero--plain .phero__title { color: var(--stone-0); }
+
+.phero__intro p {
+  font-size: var(--step-1);
+  line-height: 1.55;
+  color: var(--on-dark);
+  margin-bottom: 0;
+}

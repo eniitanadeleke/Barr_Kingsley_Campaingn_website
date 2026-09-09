@@ -1,0 +1,3 @@
+/* Track Record leans on the shared Timeline component; only page-level
+   spacing lives here. */
+.record-intro { max-width: 58ch; }

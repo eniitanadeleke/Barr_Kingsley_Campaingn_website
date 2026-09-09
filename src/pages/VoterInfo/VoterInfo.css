@@ -1,0 +1,8 @@
+/* Deliberately the plainest page here. It is non-partisan factual
+   information, so it carries no photography and no persuasion — the
+   restraint is the point. */
+
+.voter-body { max-width: 820px; }
+.voter-body h2 { margin-top: var(--s-6); max-width: 22ch; }
+.voter-body h2:first-child { margin-top: 0; }
+.voter-body p { color: var(--ink-soft); }

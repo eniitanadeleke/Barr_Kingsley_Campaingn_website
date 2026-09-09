@@ -1,0 +1,19 @@
+.notice {
+  border-left: 1px solid var(--brass);
+  padding: var(--s-1) 0 var(--s-1) var(--s-3);
+  margin-block: var(--s-4);
+}
+
+.notice__body {
+  margin: 0;
+  max-width: 72ch;
+  font-size: var(--step--1);
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
+.notice__label {
+  color: var(--brass-dk);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}

@@ -1,0 +1,15 @@
+.contact-form__heading { margin-top: var(--s-5); }
+
+.contact-aside { position: sticky; top: 150px; }
+.contact-aside__image { margin-bottom: var(--s-4); }
+
+.contact-status {
+  margin-top: var(--s-3);
+  padding: var(--s-2) 0 var(--s-2) var(--s-3);
+  border-left: 1px solid var(--brass);
+  font-size: var(--step--1);
+  color: var(--ink-soft);
+}
+.contact-status--error { border-left-color: var(--coral); color: var(--coral); }
+
+@media (max-width: 960px) { .contact-aside { position: static; } }

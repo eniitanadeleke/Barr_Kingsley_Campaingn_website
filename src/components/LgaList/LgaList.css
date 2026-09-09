@@ -1,0 +1,48 @@
+/* Plain named list — a brass-ruled index, used on Voter Information */
+.lga-list {
+  list-style: none;
+  margin: var(--s-3) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.lga-list li {
+  padding: 15px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: var(--step--1);
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.section-dark .lga-list { border-top-color: rgba(194,161,92,0.20); }
+.section-dark .lga-list li { border-bottom-color: rgba(194,161,92,0.20); color: var(--on-dark); }
+
+/* Photo grid — the district, told in pictures */
+.lga-grid {
+  list-style: none;
+  margin: var(--s-5) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+
+.lga-card { position: relative; overflow: hidden; }
+
+.lga-card__name {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 46px 16px 16px;
+  font-family: var(--font-display);
+  font-size: var(--step-1);
+  font-weight: 400;
+  color: var(--stone-0);
+  background: linear-gradient(180deg, transparent, rgba(8,21,26,0.88));
+  letter-spacing: -0.01em;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) { .lga-grid { grid-template-columns: repeat(2, 1fr); } }

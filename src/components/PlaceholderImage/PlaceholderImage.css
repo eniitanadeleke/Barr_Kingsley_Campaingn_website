@@ -1,0 +1,69 @@
+.ph {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  background: var(--stone-100);
+}
+
+.ph--portrait  { aspect-ratio: 4 / 5; }
+.ph--landscape { aspect-ratio: 3 / 2; }
+.ph--wide      { aspect-ratio: 16 / 7; }
+.ph--square    { aspect-ratio: 1 / 1; }
+.ph--tall      { aspect-ratio: 3 / 4; }
+
+.ph__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s var(--ease);
+}
+
+.ph:hover .ph__img { transform: scale(1.035); }
+
+/* Unfilled slot: a dark brass-ruled field, so a page without
+   photography still reads as designed rather than broken. */
+.ph--empty {
+  display: grid;
+  place-items: center;
+  background:
+    repeating-linear-gradient(
+      118deg,
+      rgba(194,161,92,0.05) 0 20px,
+      rgba(194,161,92,0.10) 20px 40px
+    ),
+    linear-gradient(158deg, var(--slate) 0%, var(--abyss) 100%);
+  border: 0;
+}
+
+.ph__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  padding: var(--s-3);
+  max-width: 40ch;
+}
+
+.ph__mark {
+  width: 1px;
+  height: 30px;
+  background: var(--brass);
+  opacity: 0.7;
+}
+.ph__mark::after { content: none; }
+
+.ph__label {
+  font-family: var(--font-body);
+  font-size: var(--step--1);
+  font-weight: 600;
+  color: var(--brass-lt);
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+}
+
+.ph__note {
+  font-size: var(--step--1);
+  color: var(--on-dark-mute);
+  line-height: 1.5;
+}

@@ -1,0 +1,3 @@
+/* Events uses the shared DataTable and ImageBand, so only page-level
+   spacing lives here. */
+.events-intro { max-width: 58ch; }

@@ -1,0 +1,27 @@
+.build-note {
+  border-left: 4px solid var(--red);
+  background: var(--red-wash);
+  padding: var(--gap-s) var(--gap-m);
+  margin-block: var(--gap-m);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.build-note--quiet {
+  border-left-color: var(--green-600);
+  background: var(--sand);
+}
+
+.build-note__body {
+  margin: 0;
+  max-width: 78ch;
+  font-size: var(--step--1);
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+.build-note__label {
+  color: var(--red);
+  font-weight: 700;
+}
+
+.build-note--quiet .build-note__label { color: var(--green-800); }

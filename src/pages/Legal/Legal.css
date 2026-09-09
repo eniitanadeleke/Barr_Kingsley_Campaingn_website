@@ -1,0 +1,20 @@
+/* No photography on the legal pages. These are read for accuracy, not
+   persuasion, so the measure stays narrow and the page stays plain. */
+
+.legal-body { max-width: 720px; }
+.legal-section { scroll-margin-top: 140px; }
+.legal-body p { color: var(--ink-soft); }
+
+.legal-body p strong {
+  display: block;
+  font-family: var(--font-body);
+  font-size: var(--step--2);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.section-dark .legal-body p { color: var(--on-dark); }
+.section-dark .legal-body p strong { color: var(--stone-0); }
+.legal-attrib { margin-bottom: 0; }
