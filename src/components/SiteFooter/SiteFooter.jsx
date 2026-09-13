@@ -15,7 +15,7 @@ export default function SiteFooter() {
             </p>
 
             <p className="footer-detail">
-              Phone: [PHONE] &middot; WhatsApp: [WHATSAPP]
+              Phone: [PHONE] &middot;
               <br />
               Email: [EMAIL]
             </p>
@@ -103,9 +103,9 @@ export default function SiteFooter() {
 
         </div>
 
-        <p className="attribution">
+        {/* <p className="attribution">
           Published by [ORGANISATION], [ADDRESS].
-        </p>
+        </p> */}
       </div>
     </footer>
   )
